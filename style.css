@@ -124,6 +124,32 @@ a { color: inherit; text-decoration: none; }
 .price { margin-top: auto; padding-top: 20px; font-size: 20px; font-weight: 800; color: var(--ink); }
 .price span { font-size: 13px; font-weight: 500; color: var(--muted); }
 
+/* ---- free vs paid ---- */
+.fvp { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 22px; }
+.fvp-col {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 28px 26px; background: var(--card);
+}
+.fvp-col.fvp-free { background: var(--bg-alt); }
+.fvp-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.fvp-head h3 { font-size: 18px; font-weight: 700; }
+.fvp-badge {
+  font-size: 12px; font-weight: 800; letter-spacing: .05em;
+  padding: 4px 10px; border-radius: 6px;
+}
+.fvp-badge.free { color: #0f766e; background: rgba(15,118,110,.1); }
+.fvp-badge.paid { color: var(--accent); background: rgba(26,86,219,.1); }
+.fvp-col p { color: var(--ink-soft); font-size: 14.5px; margin-bottom: 14px; }
+.fvp-col ul { list-style: none; margin: 0 0 20px; }
+.fvp-col li { position: relative; padding-left: 20px; font-size: 14px; color: var(--ink-soft); margin-bottom: 8px; }
+.fvp-col li::before { content: "·"; position: absolute; left: 4px; color: var(--accent); font-weight: 800; }
+.fvp-slogan {
+  text-align: center; font-size: 16px; font-weight: 600; color: var(--ink);
+  max-width: 720px; margin: 0 auto; padding: 18px 22px;
+  border-radius: var(--radius); background: rgba(26,86,219,.06);
+  border: 1px solid rgba(26,86,219,.16); line-height: 1.8;
+}
+
 /* ---- proof ---- */
 .proof-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: start; }
 .proof-text p { color: var(--ink-soft); margin-bottom: 18px; }
